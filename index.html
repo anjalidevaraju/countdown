@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>EOX Countdown Tracker</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="underline">Triumph UAT</h1>
+    <ul>
+      <li><span id="days">0</span>days</li>
+      <li><span id="hours">0</span>Hours</li>
+      <li><span id="minutes">0</span>Minutes</li>
+      <li><span id="seconds">0</span>Seconds</li>
+    </ul>
+  </div>
+
+  <script src="./js/yscountdown.js"></script>
+  <script>
+
+    var daysElement = document.querySelector("#days");
+    var hoursElement = document.querySelector("#hours");
+    var minutesElement = document.querySelector("#minutes");
+    var secondsElement = document.querySelector("#seconds");
+    var containerElement = document.querySelector(".container");
+    var endDate = "2024/04/30";
+
+    var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
+
+      if (finished) {
+        containerElement.textContent = "Expired";
+      }
+
+      daysElement.textContent = remaining.totalDays;
+      hoursElement.textContent = remaining.hours;
+      minutesElement.textContent = remaining.minutes;
+      secondsElement.textContent = remaining.seconds;
+
+    });
+
+  </script>
+</body>
+
+</html>
