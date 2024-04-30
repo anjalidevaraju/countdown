@@ -43,3 +43,9 @@
   .underline {
       text-decoration: underline;
   }
+
+  .display-warning {
+    font-size: 48px;
+    color: white;
+    background-color: red;
+  }

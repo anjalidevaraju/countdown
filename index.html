@@ -12,6 +12,7 @@
   <div class="container">
     <img src="./logo.webp" alt="" srcset="">
     <h1 class="underline">Triumph UAT</h1>
+    <div class="display-warning">Delayed</div>
     <ul>
       <li><span id="days">0</span>days</li>
       <li><span id="hours">0</span>Hours</li>
@@ -28,12 +29,12 @@
     var minutesElement = document.querySelector("#minutes");
     var secondsElement = document.querySelector("#seconds");
     var containerElement = document.querySelector(".container");
-    var endDate = "2024/04/30 19:00:00";
+    var endDate = "2024/05/03 19:00:00";
 
     var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
 
       if (finished) {
-        containerElement.textContent = "Expired";
+        containerElement.textContent = "We are delayed... Think about it...!!!";
       }
 
       daysElement.textContent = remaining.totalDays;
