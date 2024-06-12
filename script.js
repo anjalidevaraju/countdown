@@ -1,24 +1,20 @@
 const slidesData = [
   {
     "image": "eoxlogo.jpg",
-    "title": "Triumph",
-    "deadline": "2024-06-7T23:36:10"
-  },
-  {
-    "image": "eoxlogo.jpg",
-    "title": "Foothills",
-    "deadline": "2024-06-10T00:00:00"
-  },
-  {
-    "image": "eoxlogo.jpg",
-    "title": "Skyward OCAC",
-    "deadline": "2024-06-10T15:11:00"
-  },
-  {
-    "image": "eoxlogo.jpg",
-    "title": "Hub DriveTrophy Trucking",
+    "title": "HDO - Trophy Trucking",
     "deadline": "2024-07-01T00:00:00"
+  },
+  {
+    "image": "eoxlogo.jpg",
+    "title": "HDO - Workers Comp",
+    "deadline": "2024-06-24T00:00:00"
+  },
+  {
+    "image": "eoxlogo.jpg",
+    "title": "True North Feedback",
+    "deadline": "2024-06-18T00:00:00"
   }
+
 ];
 
 
