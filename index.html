@@ -1,50 +1,18 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>EOX Countdown Tracker</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow with Pause/Resume and Countdown</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <div class="slideshow">
+        <div class="slides">
+            
+        </div>
+    </div>
 
-  <div class="container">
-    <img src="./logo.webp" alt="" srcset="">
-    <h1 class="underline">Triumph UAT</h1>
-    <div class="display-warning">Delayed</div>
-    <ul>
-      <li><span id="days">0</span>days</li>
-      <li><span id="hours">0</span>Hours</li>
-      <li><span id="minutes">0</span>Minutes</li>
-      <li><span id="seconds">0</span>Seconds</li>
-    </ul>
-  </div>
-
-  <script src="./js/yscountdown.js"></script>
-  <script>
-
-    var daysElement = document.querySelector("#days");
-    var hoursElement = document.querySelector("#hours");
-    var minutesElement = document.querySelector("#minutes");
-    var secondsElement = document.querySelector("#seconds");
-    var containerElement = document.querySelector(".container");
-    var endDate = "2024/06/03 19:00:00";
-
-    var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
-
-      if (finished) {
-        containerElement.textContent = "We are delayed... Think about it...!!!";
-      }
-
-      daysElement.textContent = remaining.totalDays;
-      hoursElement.textContent = remaining.hours;
-      minutesElement.textContent = remaining.minutes;
-      secondsElement.textContent = remaining.seconds;
-
-    });
-
-  </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
