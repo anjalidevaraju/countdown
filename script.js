@@ -14,8 +14,8 @@ const slidesData = [
   {
     "image": "eoxlogo.jpg",
     "title": "True North Feedback",
-    "deadline": "2024-06-1T00:00:00",
-    "active": false
+    "deadline": "2024-06-18T00:00:00",
+    "active": true
   }
 ];
 
