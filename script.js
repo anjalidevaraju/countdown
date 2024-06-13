@@ -9,13 +9,13 @@ const slidesData = [
     "image": "eoxlogo.jpg",
     "title": "HDO - Workers Comp",
     "deadline": "2024-06-24T00:00:00",
-    "active": false
+    "active": true
   },
   {
     "image": "eoxlogo.jpg",
     "title": "True North Feedback",
     "deadline": "2024-06-1T00:00:00",
-    "active": true
+    "active": false
   }
 ];
 
