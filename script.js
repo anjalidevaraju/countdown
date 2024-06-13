@@ -25,7 +25,7 @@ let currentIndex = 0;
 function pauseResume() {
   if (intervalId) {
     clearInterval(intervalId);
-    intervalId = null; // Set intervalId to null to indicate that the slideshow is paused
+    intervalId = null;
   } else {
     intervalId = setInterval(nextSlide, 5000);
   }
@@ -34,7 +34,7 @@ function pauseResume() {
 function updateCountdown() {
   let now = new Date();
   slidesData.forEach((slide, index) => {
-    if (slide.active) { // Check if the project is active
+    if (slide.active) { 
       let endTime = new Date(slide.deadline);
       let countdownElem = document.getElementById(`countdown-${index + 1}`);
       let countdownLabelElem = document.getElementById(`countdown-label-${index + 1}`);
@@ -52,7 +52,7 @@ function updateCountdown() {
       }
 
       if (countdown.label === "DEADLINE CROSSED") {
-        slideElement.remove(); // Remove the slide from the DOM
+        slideElement.remove(); 
       }
     }
   });
@@ -87,7 +87,7 @@ function nextSlide() {
 window.onload = function() {
   let slidesContainer = document.querySelector('.slides');
   slidesData.forEach((slide, index) => {
-    if (slide.active) { // Check if the project is active
+    if (slide.active) { 
       let slideElement = document.createElement('div');
       slideElement.classList.add('slide');
       slideElement.innerHTML = `
