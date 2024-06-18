@@ -1,20 +1,26 @@
 const slidesData = [
   {
     "image": "eoxlogo.jpg",
-    "title": "HDO - Trophy Trucking",
-    "deadline": "2024-07-01T00:00:00",
+    "title": "HDO - Trophy Trucking UAT",
+    "deadline": "2024-07-01T18:00:00",
     "active": true
   },
   {
     "image": "eoxlogo.jpg",
-    "title": "HDO - Workers Comp",
-    "deadline": "2024-06-24T00:00:00",
+    "title": "HDO - Workers Comp UAT",
+    "deadline": "2024-06-18T18:00:00",
     "active": true
   },
   {
     "image": "eoxlogo.jpg",
     "title": "True North Feedback",
-    "deadline": "2024-06-18T00:00:00",
+    "deadline": "2024-06-18T18:00:00",
+    "active": false
+  },
+  {
+    "image": "eoxlogo.jpg",
+    "title": "Foorhills Feedback UAT",
+    "deadline": "2024-06-26T18:00:00",
     "active": true
   }
 ];
