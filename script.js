@@ -1,27 +1,21 @@
 const slidesData = [
   {
     "image": "eoxlogo.jpg",
-    "title": "HDO - Trophy Trucking UAT",
-    "deadline": "2024-07-01T18:00:00",
+    "title": "HDO - Trophy Trucking",
+    "deadline": "2024-07-01T00:00:00",
     "active": true
   },
   {
     "image": "eoxlogo.jpg",
-    "title": "HDO - Workers Comp UAT",
-    "deadline": "2024-06-18T18:00:00",
+    "title": "HDO - Workers Comp",
+    "deadline": "2024-06-24T00:00:00",
     "active": true
   },
   {
     "image": "eoxlogo.jpg",
     "title": "True North Feedback",
-    "deadline": "2024-06-18T18:00:00",
+    "deadline": "2024-06-18T00:00:00",
     "active": false
-  },
-  {
-    "image": "eoxlogo.jpg",
-    "title": "Foothills Feedback UAT",
-    "deadline": "2024-06-26T18:00:00",
-    "active": true
   }
 ];
 
@@ -31,7 +25,7 @@ let currentIndex = 0;
 function pauseResume() {
   if (intervalId) {
     clearInterval(intervalId);
-    intervalId = null;
+    intervalId = null; 
   } else {
     intervalId = setInterval(nextSlide, 5000);
   }
@@ -107,6 +101,8 @@ window.onload = function() {
         </div>
       `;
       slidesContainer.appendChild(slideElement);
+    } else {
+      slidesData.splice(index, 1);
     }
   });
 
