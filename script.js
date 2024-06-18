@@ -19,7 +19,7 @@ const slidesData = [
   },
   {
     "image": "eoxlogo.jpg",
-    "title": "Foorhills Feedback UAT",
+    "title": "Foothills Feedback UAT",
     "deadline": "2024-06-26T18:00:00",
     "active": true
   }
