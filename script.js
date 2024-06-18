@@ -1,21 +1,21 @@
 const slidesData = [
     {
-      "image": "eoxlogo.jpg",
-      "title": "HDO - Trophy Trucking",
-      "deadline": "2024-07-01T00:00:00",
-      "active": true
+        "image": "eoxlogo.jpg",
+        "title": "HDO - Trophy Trucking",
+        "deadline": "2024-07-01T00:00:00",
+        "active": true
     },
     {
-      "image": "eoxlogo.jpg",
-      "title": "HDO - Workers Comp",
-      "deadline": "2024-06-24T00:00:00",
-      "active": true
+        "image": "eoxlogo.jpg",
+        "title": "HDO - Workers Comp",
+        "deadline": "2024-06-24T00:00:00",
+        "active": true
     },
     {
-      "image": "eoxlogo.jpg",
-      "title": "True North Feedback",
-      "deadline": "2024-06-18T00:00:00",
-      "active": false
+        "image": "eoxlogo.jpg",
+        "title": "True North Feedback",
+        "deadline": "2024-06-18T00:00:00",
+        "active": false
     }
 ];
 
@@ -95,6 +95,33 @@ function showSlide(index) {
     updateCountdown();
 }
 
+function addTouchListeners() {
+    let slidesContainer = document.querySelector('.slides');
+    let initialX = null;
+
+    slidesContainer.addEventListener('touchstart', function(event) {
+        initialX = event.touches[0].clientX;
+    });
+
+    slidesContainer.addEventListener('touchmove', function(event) {
+        if (initialX === null) {
+            return;
+        }
+
+        let currentX = event.touches[0].clientX;
+        let diffX = initialX - currentX;
+
+        if (diffX > 0) {
+            nextSlide();
+        } else if (diffX < 0) {
+            prevSlide();
+        }
+
+        initialX = null;
+        event.preventDefault();
+    });
+}
+
 window.onload = function () {
     let slidesContainer = document.querySelector('.slides');
     slidesData.forEach((slide, index) => {
@@ -120,4 +147,5 @@ window.onload = function () {
 
     updateCountdown();
     intervalId = setInterval(nextSlide, 5000);
+    addTouchListeners();
 };
